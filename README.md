@@ -2,7 +2,7 @@
 
 A language-learning vocabulary app built with **Flutter**, **Node.js**, and **Firebase**.
 
-Users can save vocabulary words they want to learn and view their saved words in a polished, modern interface.
+Users can save vocabulary words they want to learn and view their saved words in a warm, human-centered interface — designed to feel like a well-loved language notebook.
 
 ---
 
@@ -34,7 +34,7 @@ LingoBreeze/
 | State Management | Riverpod (AsyncNotifier) |
 | Backend API | Node.js + Express |
 | Database | Firebase Cloud Firestore |
-| UI Design | Material 3, Glassmorphism, Google Fonts |
+| UI Design | Material 3, Warm organic theme, Google Fonts |
 
 ---
 
@@ -85,6 +85,8 @@ npm start
 
 The API will be available at `http://localhost:3000`.
 
+> **Note:** If you don't have Firebase configured, the server automatically runs in **demo mode** with sample data (no setup needed).
+
 ### Flutter App Setup
 
 ```bash
@@ -107,15 +109,26 @@ flutter run
 Update the API base URL in `flutter-app/lib/core/constants/api_constants.dart`:
 
 ```dart
-// For Android Emulator:
-static const String baseUrl = 'http://10.0.2.2:3000';
+// Production (Vercel):
+static const String baseUrl = 'https://your-vercel-url.vercel.app';
 
-// For iOS Simulator / Web:
+// For local development:
 static const String baseUrl = 'http://localhost:3000';
 
-// For physical device (use your machine's IP):
-static const String baseUrl = 'http://192.168.x.x:3000';
+// For Android Emulator:
+static const String baseUrl = 'http://10.0.2.2:3000';
 ```
+
+### Vercel Deployment (Backend)
+
+The backend is configured for Vercel deployment:
+
+```bash
+cd backend
+npx vercel --prod
+```
+
+> **Important:** After deploying, disable **Deployment Protection** in your Vercel project settings (Settings → Deployment Protection → set to "Disabled" or "Only Preview") so the API is publicly accessible.
 
 ---
 
@@ -162,11 +175,12 @@ Health check endpoint.
 
 ## 🎨 Design
 
-- **Dark Theme**: Deep indigo-to-purple gradient backgrounds
-- **Glassmorphism**: Frosted glass card effects with subtle borders
+- **Warm Light Theme**: Cream/ivory backgrounds with soft parchment gradients
+- **Paper-like Cards**: Soft white cards with natural shadows — no harsh neon glows
+- **Earthy Palette**: Terracotta and sage green accents for a warm, human feel
 - **Animations**: Staggered slide-in for cards, elastic scale for FAB
 - **Typography**: Outfit (headings) + Inter (body) from Google Fonts
-- **Color Palette**: Teal/cyan accents on dark backgrounds
+- **Philosophy**: Designed to feel organic and approachable, not cold or AI-generated
 
 ---
 
@@ -186,7 +200,7 @@ Code Organization:               Manual
 
 | Area | Implementation |
 |------|---------------|
-| UI/UX Quality | Premium dark theme with glassmorphism, animations, and Material 3 |
+| UI/UX Quality | Warm humanized theme with organic palette, animations, and Material 3 |
 | Flutter Code Quality | Clean architecture, Riverpod state management, reusable widgets |
 | Firebase Integration | Cloud Firestore for storage, direct SDK for writes |
 | Node.js API Quality | Express with proper error handling, CORS, health check |

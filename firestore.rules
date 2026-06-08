@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Words collection - read/write access for all authenticated and unauthenticated users
+    // NOTE: For production, restrict this to authenticated users only
+    match /words/{wordId} {
+      allow read, write: if true;
+    }
+  }
+}

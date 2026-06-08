@@ -1,0 +1,24 @@
+# Flutter
+flutter-app/.dart_tool/
+flutter-app/.packages
+flutter-app/build/
+flutter-app/.flutter-plugins
+flutter-app/.flutter-plugins-dependencies
+flutter-app/android/.gradle/
+flutter-app/android/local.properties
+flutter-app/ios/Pods/
+flutter-app/ios/.symlinks/
+flutter-app/ios/Flutter/Flutter.framework
+flutter-app/ios/Flutter/Flutter.podspec
+
+# Node.js
+backend/node_modules/
+backend/.env
+backend/serviceAccountKey.json
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
